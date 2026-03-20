@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.spinnerWrapper {
+  text-align: center;
+}
+
+.spinnerContainer {
+  position: relative;
+}
+
+.svgRoot {
+  width: 400px;
+  overflow: visible;
+}
+
+/* 轉盤群組樣式 */
+.wheelGroup {
+  transform-origin: 0px 0px;
+  transition: transform 2s cubic-bezier(0.1, 0, 0.2, 1);
+}
+
+/* 文字補償旋轉 */
+.counterRotateText {
+  font-weight: bold;
+  text-anchor: middle;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 2s cubic-bezier(0.1, 0, 0., 1);
+}
+
+/* 中心按鈕樣式 */
+.centerButton {
+  fill: #fff;
+  stroke: #ccc;
+  stroke-width: 0.01;
+  cursor: pointer;
+}
+
+.centerButtonDisabled {
+  cursor: not-allowed;
+}
+
+.buttonText {
+  text-anchor: middle;
+  alignment-baseline: middle;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* 空狀態佔位符 */
+.emptyPlaceholder {
+  width: 400px;
+  height: 400px;
+  border: 2px dashed #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
